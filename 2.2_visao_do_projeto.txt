@@ -1,0 +1,80 @@
+1. Titulo
+
+Sistema de visualizacao de dados de producao
+
+2. Objetivo
+
+Em um prazo de 90 dias criar uma pagina WEB(backend/frontend) que possa apresentar 
+os dados de producao das 3 linhas de montagem de cockpits(jetta/taos/tiguan).
+	=> S -> eSpecifica	: deve ser clara, com um objetivo especifico;
+	=> M -> Mensuravel	: é possivel medi-la de alguma forma;
+	=> A -> Atingivel	: deve ser realista;
+	=> R -> Relevante	: o objetivo deve ser desafiador para fazer valer a pena;
+	=> T -> Temporal	: deve ter um prazo de tempo definido;
+
+3. Justificativa
+
+As linhas de montagem nao possuem um sistema de controle on line de producao x planejado
+com facil diferenciacao por metodos de cores de quando estamos atendendo ou colocando
+em risco o processo de entrega just in sequence.
+
+4. Descricao Geral
+
+O sistema a ser desenvolvido deve permitir gestionar on line os dados de producao
+hora a hora, por turno e por dia. Deve permitir configurar os horarios de turnos
+com inicio e fim de turno e 3 possiveis pausas por turno.
+Necessario configurar quais dias da semana o sistema deve ser ativado e quis turnos
+Necessario configurar os ranges de cores para cada linha em separado para verde(bom),
+amarelo(alerta) e vermelho(risco).
+Possibilidade de enviar mensagens por telegram quando sistema em risco
+
+5. Equipe
+
+	Nome					Papel
+A) Reginaldo Lopes			Scrum Master/Programador
+B) Hirton Maia				Dono do Produto
+
+6. Partes Interessadas
+
+	Nome					Descricao
+Jorge						Gerente de producao
+VW							Cliente
+Equipe de engenharia		Utilizarao o sistema para dados e configuracoes
+Supervisores de producao	Utilizarao para avaliar o desempenho do turno
+Equipe de projeto			Interessado me obter exito no pojeto para abrir 
+							novas oportunidades de crescimento individual
+IT							Area que deve disponibilizar as ferramentas de
+							desenvolvimento e os recursos de utilizacao
+							como computadores, bancos de dado, acesso a internet,
+							servidores WEB e infra instrutura
+							
+7. Premissas
+
+a. Para a implantacao, assumimos que teremos um computador em cada linha de producao com
+o sistema desktop gerando os dados de paradas de linhas.
+
+b. Estamos assumindo que teremos acesso a dados de producao de ordens recebidas
+e produtos finalizados hora a hora, por turno e por dia.
+
+c. Estamos assumindo que termos uma base de dados de producao disponivel para implantacao
+de todos os registros necessarios
+
+8. Restricoes
+
+a. O banco de dados necessita ter disponibilidade 7d x 24h
+
+b. Necessario 2 pontos de rede por linha de montagem para conexao do computador e PLC
+
+
+9. Escopo Excluído
+
+Nao faz parte deste escopo desenvolvimento de aplicativos móveis
+
+10. Riscos Preliminares
+
+a. Viagens a suporte tecnico a outras plantas pode gerar atrasos no desenvolvimento
+do sistema
+
+b. Alteracao de prioridades por instalacao de poka yokes devido a erros de montagem
+e impactos no cliente final
+
